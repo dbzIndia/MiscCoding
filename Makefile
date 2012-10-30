@@ -15,4 +15,4 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	\rm sorts/*.o sorts/sorts
+	\rm -f sorts/*.o sorts/sorts
