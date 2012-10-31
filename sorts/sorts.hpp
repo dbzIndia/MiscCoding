@@ -9,6 +9,7 @@ namespace arjunexample
         public:
             insertionSort();
             void sort(int arr[], int length);
+            void sortDesc(int arr[], int length);
     };      
 }
 
