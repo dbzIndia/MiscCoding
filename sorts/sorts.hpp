@@ -4,13 +4,13 @@
 
 namespace arjunexample
 {
-    class InsertionSort
+    class Sorts
     {
         public:
-            InsertionSort();
-            void sort(int arr[], int length);
-            void sortDesc(int arr[], int length);
-    };      
+            void insSort(int arr[], int length);
+            void insSortDesc(int arr[], int length);
+            void selSort(int arr[], int length);
+    };
 }
 
 

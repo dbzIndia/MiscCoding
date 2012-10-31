@@ -3,14 +3,20 @@
 #include <iostream>
 #include "sorts.hpp"
 
+namespace 
+{
+    void swap(int *a, int *b)
+    {
+        int tmp = *a;
+        *a = *b;
+        *b = tmp;
+    }
+}
+
 namespace arjunexample
 {
-    InsertionSort::InsertionSort()
-    {
-        std::cout << "Here is my sample c++ program" << std::endl;
-    }
 
-    void InsertionSort::sort(int arr[], int length)
+    void Sorts::insSort(int arr[], int length)
     {
         int i,j;
         for(i=0; i< length; i++)
@@ -18,15 +24,13 @@ namespace arjunexample
             j = i;
             while (j > 0 && arr[j-1] > arr[j])
             {
-                int lowerValue = arr[j];
-                arr[j] = arr[j-1];
-                arr[j-1] = lowerValue;
+                swap(&arr[j],&arr[j-1]);
                 j--;
             }
         }
     }
 
-    void InsertionSort::sortDesc(int arr[], int length)
+    void Sorts::insSortDesc(int arr[], int length)
     {
         int i,j;
         for(i=0; i < length; i++)
@@ -34,10 +38,28 @@ namespace arjunexample
             j = i;
             while(j > 0 && arr[j-1] < arr[j])
             {
-               int lowerValue = arr[j];
-               arr[j] = arr[j-1];
-               arr[j-1] = lowerValue;
-               j--;
+                swap(&arr[j],&arr[j-1]);
+                j--;
+            }
+        }
+    }
+
+    void Sorts::selSort(int arr[], int length)
+    {
+        int i,j;
+        for(i=0; i < length; i++)
+        {
+            int lIndex = i ;
+            for(j=i+1; j < length; j++)
+            {
+                if(arr[lIndex] > arr[j])
+                {
+                    lIndex = j;
+                }
+            }
+            if(i != lIndex)
+            {
+                swap(&arr[i],&arr[lIndex]);
             }
         }
     }

@@ -24,18 +24,22 @@ int main(int argc, char* argv[])
     if(argc > 1 && argc <3
             && (atoi(argv[1]) < 3))
     {
-        InsertionSort insert;
+        Sorts sortAlgo;
         int samp[] = {4,1,2,5,3};
         int sel = atoi(argv[1]);
         switch(sel)
         {
             case INSERTION_ASC:
                 cout << "Insertion sort Ascending order" << endl;
-                insert.sort(samp,5);
+                sortAlgo.insSort(samp,5);
                 break;
             case INSERTION_DSC:
                 cout << "Insertion sort Descending order" << endl;
-                insert.sortDesc(samp,5);
+                sortAlgo.insSortDesc(samp,5);
+                break;
+            case SELECTION:
+                cout << "Selection sort " << endl;
+                sortAlgo.selSort(samp,5);
                 break;
             default:
                 break;
