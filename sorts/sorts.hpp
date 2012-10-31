@@ -4,13 +4,14 @@
 
 namespace arjunexample
 {
-    class insertionSort
+    class InsertionSort
     {
         public:
-            insertionSort();
+            InsertionSort();
             void sort(int arr[], int length);
             void sortDesc(int arr[], int length);
     };      
 }
 
 
+/* vim: set noai ts=4 sw=4: */

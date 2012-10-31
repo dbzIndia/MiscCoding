@@ -5,12 +5,12 @@
 
 namespace arjunexample
 {
-    insertionSort::insertionSort()
+    InsertionSort::InsertionSort()
     {
         std::cout << "Here is my sample c++ program" << std::endl;
     }
 
-    void insertionSort::sort(int arr[], int length)
+    void InsertionSort::sort(int arr[], int length)
     {
         int i,j;
         for(i=0; i< length; i++)
@@ -26,7 +26,7 @@ namespace arjunexample
         }
     }
 
-    void insertionSort::sortDesc(int arr[], int length)
+    void InsertionSort::sortDesc(int arr[], int length)
     {
         int i,j;
         for(i=0; i < length; i++)
