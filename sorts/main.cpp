@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
     }
     else 
     {
-        throw std::runtime_error("args: 1-Insertion Ascending : 2-Insertion Desc : 3-Selection");
+        throw std::runtime_error("args: 0-Insertion Ascending : 1-Insertion Desc : 2-Selection");
     }
 }
 

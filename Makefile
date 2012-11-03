@@ -1,18 +1,8 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=
-#SOURCES=main.cpp sorts.cpp 
-SOURCES= $(wildcard sorts/*.cpp)
-OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=sorts
 
-all: $(SOURCES) $(EXECUTABLE)
-	
-$(EXECUTABLE): $(OBJECTS)
-	$(CC) $(LDFLAGS) $(OBJECTS) -o sorts/$@
-
-.cpp.o:
-	$(CC) $(CFLAGS) $< -o $@
-
+all: 
+	cd sorts; make;
 clean:
-	\rm -f sorts/*.o sorts/sorts
+	cd sorts; make clean;
